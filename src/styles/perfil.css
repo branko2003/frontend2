@@ -1,0 +1,176 @@
+/* UserProfile.css */
+.userProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .userProfile__info {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .userProfile__image {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    padding: 20px;
+
+
+  }
+  
+  .userProfile__image img {
+    height: 300px;
+    width: auto;
+    border-radius: 75px;
+  }
+  
+  .userProfile__data,
+  .userProfile__credentials {
+    border: 7px solid #ca6212;
+    padding: 20px;
+    position: relative;
+    margin-top: 20px;
+    width: 80%;
+
+    backdrop-filter: blur(20px);
+    color: white;
+  }
+  
+
+  .userProfile__data button {
+    background-color: #c29b61;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+    font-weight: bold; /* Hace el texto en negrita */
+    width: 50%; /* Hace que el botón ocupe todo el ancho de su contenedor padre */
+    margin-left: auto;
+    margin-right: auto; /* Márgenes automáticos para centrar el botón horizontalmente */
+    display: block; /* Cambia el display a block para permitir márgenes automáticos */
+}
+.userProfile__credentials button {
+  background-color: #c29b61;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+  font-weight: bold; /* Hace el texto en negrita */
+  width: 50%; /* Hace que el botón ocupe todo el ancho de su contenedor padre */
+  margin-left: auto;
+  margin-right: auto; /* Márgenes automáticos para centrar el botón horizontalmente */
+  display: block; /* Cambia el display a block para permitir márgenes automáticos */
+
+}
+
+.userProfile__data button:hover {
+  background-color: #c29b6189;
+}
+
+.userProfile__credentials button:hover {
+  background-color: #c29b6189;
+}
+.userProfile__data label {
+  font-weight: bold;
+  color: white;
+}
+.userProfile__credentials label {
+  font-weight: bold;
+  color: white;
+}
+  .userProfile__title {
+    position: absolute;
+    top: -1em;
+    left: 20px;
+    background: #ca6212;
+    padding: 0 10px;
+    margin: 0;
+
+  }
+  
+  .userProfile form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .userProfile label {
+    margin-bottom: 5px;
+  }
+  
+  .userProfile input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    width: 90%;
+  }
+  
+  .userProfile input[readOnly] {
+    color: #666;
+  }
+  /* Estilos para los contenedores de cada par de entradas */
+.userProfile__form-row {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos uniformemente */
+    margin-bottom: 10px; /* Espacio entre filas */
+  }
+  
+  /* Estilos para cada etiqueta y entrada para asegurar que comparten la línea */
+  .userProfile__form-group {
+    display: flex;
+    flex-direction: column; /* Alinea la etiqueta y el campo de entrada verticalmente */
+    flex: 1; /* Distribuye el espacio disponible equitativamente */
+    margin-right: 50px; /* Espacio entre grupos de entrada */
+  }
+  
+  .todo{
+    display: contents;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .userProfile__image  {
+
+      display: none; /* No renderiza la imagen en pantallas de 768px o menos */
+
+    }
+    .div-botones .button-link {
+        padding: 5px 5px        /* Ajusta el ancho del logo */
+    }
+    .todo{
+      display: table-row;
+    }
+    .userProfile__info {
+      width: 100%;
+    }
+    .userProfile__title{
+      font-size: 23px;
+    }
+    .userProfile label {
+      font-size: 12px;
+  }
+  .userProfile__data, .userProfile__credentials {
+    width: 100%;
+  }
+  .userProfile input {
+    font-size: 12px;
+    width: 150%;
+}
+.userProfile__data button {
+  padding: 2px;
+  font-size: 15px;
+
+}
+.userProfile__credentials button {
+padding: 2px;
+font-size: 15px;
+
+
+
+}
+  }

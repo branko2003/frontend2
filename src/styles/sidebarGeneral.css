@@ -1,0 +1,90 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+      "sidebarGeneral header"
+      "sidebarGeneral content";
+    grid-template-rows: auto 1fr;
+    width: auto; /* Ancho del viewport */
+    height: 87.9vh; /* Alto del viewport */
+    background-color: #4a2400;
+    color: white;
+    z-index: 1000;
+    height: auto;
+
+  }
+  
+
+  .menu-icon {
+    cursor: pointer;
+  }
+  
+  #sidebarGeneral {
+    grid-area: sidebarGeneral;
+    background-color: #4a2400;
+    color: white;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  #sidebarGeneral.open {
+    transform: translateX(0);
+  }
+  
+  .sidebarGeneral-title {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  .sidebarGeneral-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebarGeneral-list-item {
+    padding: 1rem;
+  }
+  
+  .sidebarGeneral-list-item a,
+  .sidebarGeneral-list-item button {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebarGeneral-list-item a .material-icons-outlined,
+  .sidebarGeneral-list-item button .material-icons-outlined {
+    margin-right: 8px;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebarGeneral {
+      transform: translateX(0);
+      position: relative;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      grid-column: 1 / -1; /* Ocupar todas las columnas disponibles */
+    }
+  }
+  @media (min-width: 769px) {
+    .menu-icon,
+    .sidebarGeneral-title {
+      display: none;
+    }
+}
+/* Sidebar.css */
+.transparent-background {
+    background-color: transparent;
+    border: none; /* Quita el borde si es necesario */
+    transition: height 0.35s ease; /* Añade una transición suave */
+  }

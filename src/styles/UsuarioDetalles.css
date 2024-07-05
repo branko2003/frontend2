@@ -1,0 +1,48 @@
+
+.detalles {
+    position: fixed; /* Fijado en la pantalla para que no se mueva con el scroll */
+    top: 40%; /* Ajustado para mover el modal más abajo en la pantalla */
+    left: 50%; 
+    transform: translate(-50%, -30%); /* Ajustado el translate para mantener el modal centrado */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparencia para ver el fondo */
+    backdrop-filter: blur(20px); /* Efecto de desenfoque para mejorar la legibilidad */
+    padding: 20px; 
+    border: 1px solid black; 
+    z-index: 1000; /* Asegura que el modal esté sobre otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual suave */
+    max-width: 500px; /* Limita el ancho del modal para evitar problemas de diseño en pantallas grandes */
+    width: 90%; /* Hace el modal responsive */
+}
+.row-detalles {
+    display: flex;
+    justify-content: space-between; /* Asegura que los elementos dentro del contenedor se distribuyan uniformemente */
+    align-items: center; /* Alineación vertical de los campos */
+    margin-bottom: 10px; /* Espacio entre grupos de campos */
+}
+
+.row-detalles p {
+    flex: 1;  /* Ocupa la mitad del espacio disponible en la fila */
+    font-size: 18px; /* Aumenta el tamaño de la fuente a 18px */
+    margin: 0 10px; /* Espaciado entre los campos */
+}
+
+.detalles button {
+    background-color: chocolate;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+}/* Estilos para el contenedor de cada par de campos */
+
+
+.dropdown-item-custom {
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item-custom:hover {
+    background-color: #969696; /* Color gris claro */
+}
+
+.botones-final{
+    display: flex;
+    
+}

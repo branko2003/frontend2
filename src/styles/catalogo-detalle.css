@@ -1,0 +1,123 @@
+.principal-detalle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/fondo_forms.webp'); /* Asumiendo que este es el fondo global */
+    background-size: 100% 100%; /* Ajusta el tamaño del fondo */
+    height: 100vh; /* Ajusta la altura según necesites */
+    background-position: center;
+  }
+.detalles-catalogo{
+    display: flex;
+    width: 50%;  /* Ajusta el ancho según necesites */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;  /* Altura respecto al contenedor padre */
+    background-color: rgba(255, 255, 255, 0.2);  /* Semi-transparencia */
+    backdrop-filter: blur(30px);  /* Efecto de desenfoque */
+}
+
+.contenido-texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.contenido-texto h1{
+    font-size: 30px;
+    font-weight: bold; /* Hace el texto en negrita */
+
+}
+.contenido-texto .nombre_etiqueta{
+    font-size: 20px;
+    font-weight: bold; /* Hace el texto en negrita */
+}
+.contenido-texto .nombre_resultado{
+    font-size: 20px;
+    color: white;
+}
+
+.contenido-modelo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido-modelo model-viewer{
+    width: 20vw;
+    height: 60vh
+}
+.contenido-modelo img{
+    width: 20vw;
+    height: 60vh
+}
+.detalles-catalogo .botones{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detalles-catalogo button{
+    padding: 10px 40px;
+    color: black;
+    font-weight: bold; /* Hace el texto en negrita */
+    font-size: 20px;
+    background:#bf572b;
+}
+
+.detalles-linea {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* O ajusta según la necesidad */
+}
+
+.confirmacion-dialogo {
+    position: fixed;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(247, 160, 0); /* Ligeramente transparente */
+
+    padding: 20px 0px;
+    border: 1px solid #ccc;
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+    text-align: center; /* Asegura que el texto esté centrado dentro del diálogo */
+
+  }
+  
+  .confirmacion-dialogo p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .confirmacion-dialogo button {
+    margin-right: 10px;
+
+  }
+  @media (max-width: 768px) {
+    .detalles-catalogo {
+        flex-direction: column;
+        width: 80%;
+        overflow-y: auto; /* Añade el scroll vertical */
+        height: auto; /* Ajusta la altura al contenido */
+    }
+    .contenido-modelo model-viewer{
+        width: 40vw;
+        height: 40vh;
+    }
+    .contenido-modelo img{
+        width: 40vw;
+        height: auto;
+    }
+    .contenido-texto h1 {
+        font-size: 25px;
+    }
+    .contenido-texto, .contenido-modelo {
+        width: 100%;
+    }
+  }
+
+

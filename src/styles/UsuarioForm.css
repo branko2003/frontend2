@@ -1,0 +1,94 @@
+
+
+
+/* Estilos base para el formulario */
+.formulario-usuario {
+    background: rgba(255, 255, 255, 0.2);  /* Semi-transparencia para ver el fondo */
+    backdrop-filter: blur(20px); /* Efecto de desenfoque para mejorar la legibilidad */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0px auto;
+    position: relative;
+    top: 30px; /* Mueve el formulario 50px hacia abajo desde su posición original */
+    width: 40%; /* Ajusta el ancho del formulario al 90% del contenedor */
+    height: auto; /* La altura se ajusta al contenido */
+    align-self: start; /* Esto asegura que solo ocupe el espacio necesario verticalmente */
+}
+.Side-form{
+    display: flex;
+    flex-direction: row; /* Alinea los hijos en fila */
+    width: 100%; 
+    min-height: 100vh; /* Ajuste según sea necesario */
+
+}
+/* Título del formulario */
+.formulario-usuario h4 {
+    text-align: center;
+    color: #fff; /* Color blanco para el texto */
+}
+
+/* Estilos para las etiquetas */
+.label-plomo {
+    color: #ccc; /* Color gris claro para las etiquetas */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para los inputs */
+.form-control-texto {
+    background: transparent; /* Inicialmente transparente */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: background-color 0.3s; /* Suave transición para el color de fondo */
+}
+
+.form-control-texto:focus {
+    background-color: white; /* Cambia a blanco al enfocar */
+}
+
+/* Botón de submit */
+.boton-submit {
+    /*background: #0044cc;*/
+    background-color:#bf572b;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+/* Estilos para el contenedor de cada par de campos */
+.field-group {
+    display: flex;
+    justify-content: space-between; /* Asegura que los elementos dentro del contenedor se distribuyan uniformemente */
+    align-items: center; /* Alineación vertical de los campos */
+    margin-bottom: 10px; /* Espacio entre grupos de campos */
+}
+
+.field-group > div {
+    flex: 1; /* Cada <div> dentro de field-group ocupará el mismo espacio */
+    margin-right: 10px; /* Espacio a la derecha de cada <div>, excepto el último */
+}
+
+.field-group > div:last-child {
+    margin-right: 0; /* No margen derecho en el último elemento */
+}
+
+.form-control-texto {
+    width: 100%; /* Hace que cada input ocupe todo el espacio disponible en su contenedor <div> */
+}
+
+
+@media (max-width: 768px) {
+    .formulario-usuario {
+        width: 80%;
+    }
+  }
+

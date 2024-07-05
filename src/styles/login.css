@@ -1,0 +1,153 @@
+.login-page  {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/fondo_forms.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.home {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que todos los filtros y bordes queden dentro del contenedor */
+    height: auto;
+}
+
+.login-container, .section-login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vw; /* Usa un padding relativo al viewport para mejor responsividad */
+    filter: blur(0px) brightness(0.8); /* Aplica desenfoque y reduce el brillo */
+
+}
+.login-container {
+    flex: 2; /* Ocupa dos partes del espacio disponible */
+    
+}
+.login-container h1{
+    font-weight: bold;
+    margin: 0 auto 0px; /* Sin margen superior, auto (centrado horizontalmente), y 20px abajo */   
+    font-size: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.login-container p{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+
+}
+.section-login {
+    flex: 1.2; /* Ocupa una parte del espacio disponible, haciéndolo más delgado */
+}
+.section-login h2{
+    text-align: center;
+
+    font-weight: bold; /* Hace el texto en negrita */
+    font-size: 30px; /* Aumenta el tamaño del texto, ajusta según necesites */
+    margin: 0 auto 50px; /* Sin margen superior, auto (centrado horizontalmente), y 20px abajo */   
+     color: white; /* Asegúrate de que el color sea visible en tu fondo */
+}
+.login-container{
+
+    backdrop-filter: blur(0px); /* Aplica desenfoque para difuminar el fondo */
+
+}
+.welcome-message {
+    background: rgba(255, 255, 255, 0.116); /* Ligeramente transparente */
+    filter: brightness(1.2); /* Aumenta el brillo */
+}
+
+.section-login {
+    
+    backdrop-filter: blur(30px); /* Aplica desenfoque para difuminar el fondo */
+    background: transparent; /* Mantiene la transparencia para ver el fondo desenfocado */
+}
+
+.form-box, .welcome-message {
+    padding: 2vw; /* Responsividad en el padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 20px 0;
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    outline: none;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input:focus + label, .inputbox input:valid + label {
+    top: -20px;
+    font-size: 12px;
+}
+
+.section-login button {
+    /*background-color: red;*/
+    background-color:#bf572b;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+    font-weight: bold; /* Hace el texto en negrita */
+    width: 100%; /* Hace que el botón ocupe todo el ancho de su contenedor padre */
+    margin-bottom: 10px;
+}
+
+.section-login button:hover {
+    background-color: darkred;
+}
+
+.text-center {
+    text-align: center;
+
+}
+
+
+@media (max-width: 768px) {
+    .home {
+        display: block;
+    }
+    .login-container h1 {
+        color:rgb(255 94 17);
+
+        font-size: 60px;
+    }
+    .login-container p {
+        font-size: 40px;
+    }
+  }
+

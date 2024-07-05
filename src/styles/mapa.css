@@ -1,0 +1,177 @@
+.leaflet-container {
+    height: 80vh;
+    width: 100%;
+}
+.container-mapa {
+    display: flex;
+    flex-direction: row; /* Alinea los hijos en fila */
+    width: 100%; 
+
+  }
+.mapa {
+    flex: 2; /* Ocupa todo el espacio posible */
+  }
+
+.mapa-clase{
+  background-image: url('../images/fondo_negro.jpg');
+    flex: 1; /* Toma la otra mitad del espacio disponible */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos internos en columna */
+    min-width: 40%; /* Esto asegura que no sea demasiado pequeño */
+}
+
+
+
+.mapa-clase .pagination-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .mapa-clase .pagination-button {
+    color: black; /* Color del texto */
+    padding: 5px 10px; /* Más pequeño que el estilo anterior */
+    font-size: 18px; /* Tamaño de fuente reducido */
+    margin: 0 20%; /* Espaciado entre botones */
+    background-color: #ec9053; /* Color plomo completamente opaco */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves para transform y shadow */
+    border: none; /* Elimina cualquier borde predeterminado */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+  
+  }
+  .mapa-clase .pagination-button:hover {
+    transform: translateY(-5px); /* Mueve el botón hacia arriba */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra más pronunciada para dar efecto de elevación */
+  }
+  
+  .mapa-clase .pagination-buttons .pagination-button:disabled {
+    background-color: #ec9053; /* Un gris claro, por ejemplo, para botones deshabilitados */
+  
+  }
+  
+  
+  .mapa-clase .page-indicator {
+    font-size: 14px; /* Tamaño adecuado para el indicador de página */
+    color: aquamarine;
+  }
+
+  /* Estilos específicos para los botones de acción en la tabla */
+.mapa-clase .action-button {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .mapa-clase .action-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  
+  .mapa-clase .action-dropdown a {
+    color: black; /* Color del texto */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: white; /* Color de fondo inicial */
+    transition: background-color 0s, transform 0.3s; /* Transiciones suaves para el color de fondo y la transformación */
+  }
+  
+  .mapa-clase .action-dropdown a:hover {
+    transform: translateY(-3px); /* Eleva el botón */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #ccccccff; /* Color plomo completamente opaco */
+  
+  }
+  .mapa-clase .action-button.show .action-dropdown {
+    display: block;
+  }
+
+  .mapa-clase .tablita {
+    backdrop-filter: blur(10px); /* Aumenta el desenfoque para hacer visible el efecto */
+    width: 90%;
+    margin: 40px auto; /* Centra la tabla */
+    border-collapse: collapse;
+    
+  }
+
+  .mapa-clase  h4 {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio después del título */
+    font-family: 'Texturina', serif; /* Usa la fuente Texturina */
+    color: white;
+    font-size: 30px; /* Ajusta el tamaño de la fuente del título */
+    font-weight: bold; /* Negrita para mejor efecto 3D */
+    
+  }
+  .mapa-clase  .tablita th {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: left;
+    color: white;
+        backdrop-filter: blur(0px); /* Aplica desenfoque para difuminar el fondo */
+
+  }
+  
+.mapa-clase .tablita td{
+    color: rgb(224, 220, 220);
+
+  }
+  .mapa-clase .tablita th {
+    /*background-color: #004d99;*/
+    background-color: #b85614;
+  }
+.mapa-clase .tablita td:last-child {
+    text-align: center;
+    width: 30%;
+
+  }
+  .mapa-clase button {
+    padding: 8px 16px;
+    margin-right: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .mapa-clase .formulario-mapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente en el contenedor */
+    align-items: center; /* Centra el contenido horizontalmente en el contenedor */
+    width: 100%; /* Ocupa el ancho completo del contenedor padre */
+  }
+  .mapa-clase .formulario-mapa input[type="text"]{
+    width: 100%; /* Ajusta el ancho del input y botón */
+    padding: 5px; /* Padding para hacer los elementos más grandes y fáciles de interactuar */
+    margin: 10px 0; /* Espacio entre los elementos del formulario */
+    border: 1px solid #ccc; /* Estilo de borde, ajusta según sea necesario */
+  }
+  .mapa-clase .formulario-mapa button {
+      width: 50%; /* Ajusta el ancho del input y botón */
+      padding: 5px; /* Padding para hacer los elementos más grandes y fáciles de interactuar */
+      margin: 10px 0; /* Espacio entre los elementos del formulario */
+      border: 1px solid #ccc; /* Estilo de borde, ajusta según sea necesario */
+      background-color:#b85614;
+  }
+  .todo{
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    height: 100vh; /* Ajusta la altura según sea necesario */ 
+  }
+
+  @media (max-width: 768px) {
+    .container-mapa {
+      display: flex;
+      flex-direction: column-reverse;
+      overflow-y: auto;
+      height: 100vh; /* Ajusta la altura según sea necesario */
+  }
+  }
+
+

@@ -1,0 +1,129 @@
+
+
+.UsuarioForm-header {
+    background-color: #301b06; /* Color café oscuro para el encabezado */
+    padding: 10px 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Usamos flexbox para alinear fácilmente el logo y el título */
+    justify-content: flex-start; /* Alinea los elementos hacia el inicio del contenedor */
+    align-items: center; /* Centra los elementos verticalmente */
+    max-height: 120px; /* Ajusta esto según el tamaño máximo deseado para tu header */
+    margin-bottom: 0; /* Elimina cualquier margen inferior */
+
+}
+.div-botones {
+    display: flex;
+    flex-direction: row; /* Alinea los hijos en fila */
+    z-index: 3; /* Mayor que .wave para que aparezca encima */
+    padding-right: 10px; /* Ajuste según necesidad */
+    margin-left: auto; /* Empuja el botón a la derecha */
+}
+.div-botones .button-link {
+    margin: 4px;
+    background-color: #808000; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 15px; /* Tamaño del texto */
+    padding: 5px 30px; /* Espaciado interno */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano para indicar clickeable */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra para dar profundidad */
+    display: flex; /* Para alinear ícono y texto */
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    white-space: nowrap; /* Evita que el texto se envuelva */
+
+}
+
+.div-botones .button-link:hover {
+    background-color: #e0e000; /* Color al pasar el mouse */
+}
+.logo {
+    position: relative; /* Cambiado a absolute si necesitas más control sobre la posición */
+    left: 50px;          /* Ajusta según necesidad para mover el logo hacia el lado */
+    top: 50%;            /* Centra verticalmente */
+    transform: translateY(10%); /* Mantiene el logo centrado verticalmente */
+    z-index: 10;         /* Un valor de z-index mayor para asegurar que esté sobre la ola */
+    width: 250px;        /* Ajusta el ancho del logo */
+    height: auto;        /* Mantiene la proporción del logo */
+}
+
+
+.contenido_header {
+    display: flex; /* Usamos flexbox para alinear fácilmente el logo y el título */
+    justify-content: center; /* Alinea los elementos hacia el centro del contenedor */
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%; /* Ocupa todo el ancho del encabezado */
+    position: relative;
+    z-index: 2;
+}
+
+.contenido_header h2 {
+    font-family: 'Texturina', serif; /* Usa la fuente Texturina */
+    color: #ff9800;
+    font-size: 70px; /* Ajusta el tamaño de la fuente del título */
+    position: absolute; /* Posiciona el título de manera absoluta para centrarlo */
+    width: 100%; /* Asegura que el texto ocupe todo el ancho */
+    font-weight: bold; /* Negrita para mejor efecto 3D */
+    text-align: center; /* Alinea el texto al centro */
+    margin-left: 0; /* No es necesario un margen izquierdo específico */
+    left: -100px; /* Mueve el texto 20px hacia la izquierda del centro */
+
+    text-shadow: 
+    1px 1px 0 #000,  /* Múltiples sombras para crear el efecto 3D */
+    2px 2px 0 #000,  
+    3px 3px 0 #000,
+    4px 4px 0 #000,
+    5px 5px 0 #000,
+    6px 6px 0 #000,
+    7px 7px 0 #000,
+    8px 8px 0 #000,
+    9px 9px 0 #000,
+    10px 10px 0 #000;
+ /* Ajusta la cantidad de sombras según la profundidad deseada */
+    animation: movimiento-sombra 5s infinite; /* Aplica la animación de forma infinita */
+
+}
+/* Para un efecto más interesante, puedes añadir una animación que cambie la dirección de la luz */
+@keyframes movimiento-sombra {
+    0%, 100% {
+        text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000;
+    }
+    50% {
+        text-shadow: -1px -1px 0 #000, -2px -2px 0 #000, -3px -3px 0 #000, -4px -4px 0 #000, -5px -5px 0 #000;
+    }
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-image: url(../images/wave4.png);
+    background-size: 100% 100px;
+    animation: wave 5s linear infinite;
+    z-index: 1; /* Menor que el contenido del encabezado para que el texto y logo aparezcan encima */
+
+}
+@keyframes wave {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        left: 0px;          /* Ajusta según necesidad para mover el logo hacia el lado */
+        width: 150px;        /* Ajusta el ancho del logo */
+
+    }
+    .div-botones .button-link {
+        padding: 5px 5px        /* Ajusta el ancho del logo */
+    }
+  }

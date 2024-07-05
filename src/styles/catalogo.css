@@ -1,0 +1,108 @@
+.cata {
+  height: auto;
+  background: #503b2e;
+  background-size: cover; /* Esto cubrirá completamente el contenedor manteniendo las proporciones */
+}
+
+.catalogo {
+    display: flex;
+    flex-direction: row;  /* Asegura que los hijos se alineen verticalmente */
+
+  }
+  
+  .productos {
+    overflow-y: auto; /* Añade desplazamiento vertical */
+    max-height: 70vh; /* Ajusta según tus necesidades de diseño */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .producto-card {
+    color: white; /* Color del texto */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.425); /* Ligeramente transparente */
+  }
+    
+  .producto-card button{
+    color: black; /* Color del texto */
+    font-weight: bold;
+    padding: 5px; /* Espaciado interno */
+    font-size: 15px;
+    text-align: center;
+    background: #d95700; /* Ligeramente transparente */
+    width: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la transición */
+    border: none; /* Opcional: elimina el borde */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+  }
+  .producto-card button:hover {
+    transform: translateY(-5px); /* Mueve el botón hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para dar efecto de elevación */
+  }
+  .producto-card h3{
+    color: #d95700;
+    font-size: 25px;
+    backdrop-filter: blur(10px); /* Aplica desenfoque para difuminar el fondo */
+
+  }
+  .producto-card img {
+    width: 100%;
+    height: 250px; /* o la altura que prefieras, puede ajustarse si quieres más flexibilidad */
+    object-fit: contain; /* Ajusta la imagen sin cortarla */
+  }
+
+  
+.cata .pagination-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+  margin-top: 40px;
+}
+
+.cata .pagination-button {
+  color: black; /* Color del texto */
+  padding: 5px 10px; /* Más pequeño que el estilo anterior */
+  font-size: 18px; /* Tamaño de fuente reducido */
+  margin: 0 5%; /* Espaciado entre botones */
+  background-color: #d95700; /* Color plomo completamente opaco */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves para transform y shadow */
+  border: none; /* Elimina cualquier borde predeterminado */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+
+}
+.cata .pagination-button:hover {
+  transform: translateY(-5px); /* Mueve el botón hacia arriba */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra más pronunciada para dar efecto de elevación */
+}
+
+.cata .pagination-buttons .pagination-button:disabled {
+  background-color: #d95700; /* Un gris claro, por ejemplo, para botones deshabilitados */
+
+}
+
+
+.cata .page-indicator {
+  font-size: 14px; /* Tamaño adecuado para el indicador de página */
+}
+
+.producto-detail{
+  backdrop-filter: blur(10px); /* Efecto de desenfoque para mejorar la legibilidad */
+
+}
+
+@media (max-width: 768px) {
+  .productos {
+    overflow-y: auto; /* Añade desplazamiento vertical */
+    max-height: 70vh; /* Ajusta según tus necesidades de diseño */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+}
